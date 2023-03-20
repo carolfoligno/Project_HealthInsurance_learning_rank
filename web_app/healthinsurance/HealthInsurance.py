@@ -61,12 +61,12 @@ class HealthInsurance:
         
         # 'gender'
     
-        df4['gender'] = self.target_encode_gender.transform(df4['gender'], df4['response'])
+        df4['gender'] = self.target_encode_gender.transform(df4['gender'])
 
 
         # 'region_code' - Frenquency Enconding / Target Enconding / weighted target econding
         df4['region_code'] = df4['region_code'].astype(str)
-        df4['region_code'] = self.target_encode_region.transform(df4['region_code'], df4['response']) 
+        df4['region_code'] = self.target_encode_region.transform(df4['region_code']) 
 
 
         # 'vehicle_age' - One Hot Enconding 
