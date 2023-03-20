@@ -6,7 +6,7 @@ class HealthInsurance:
     
     def __init__(self):
         # variável de classe
-        self.home_path = '' 
+        self.home_path = 'web_app/' 
         # caminho relativo, em produção tira esse caminho
         
         self.annual_premium_scaler = pickle.load(open(self.home_path + 'features/annual_premium_scaler.pkl', 'rb'))
