@@ -1,7 +1,7 @@
 # teste da minha api
 
 import os
-import pickle
+import pickle5 as pickle
 import pandas as pd
 from flask import Flask, request, Response
 from healthinsurance.HealthInsurance import HealthInsurance
