@@ -38,4 +38,6 @@ No eixo X, temos a proporção de amostra do nosso conjunto de dados. No eixo Y,
 
 ![](https://user-images.githubusercontent.com/80589529/227258530-673efc7b-79dd-4b72-b465-f1999f28a5dc.png)
 
-No eixo X temos a proporção de nossa amostra que corresponde a um determinado Lift, plotado no eixo Y. 
+No eixo X temos a proporção de nossa amostra que corresponde a um determinado Lift, plotado no eixo Y. Clientes mais propensos a aceitarem a oferta aparace à esquerda do gráfico, tendo pontuações mais altas de Lift. 
+
+A linha traçada em vermelho corresponde a proporção de 20 mil clientes, que seriam as 20mil ligações. 
