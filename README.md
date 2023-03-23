@@ -23,6 +23,10 @@ Como resolução do problema de negócio, foi realizado o treinamento dos dados 
 
 Tal ordenação é realizada com uma nova função criada no google sheets do modelo já treinado, classificando os score de propensão dos clientes de forma descrescentes.
 
+- Planilha disponivel no [Google Sheets](https://docs.google.com/spreadsheets/d/114t748UXUME_M5E4ogLUyjBAzWom4olS2MyKlCMuobY/edit?usp=sharing), com uma amostra de 60 registro de clientes, onde com a função "Propensity Score" criada, é possivel ordenar os cliente mais propensos a aceitarem a oferta do novo seguro de automovel. 
+
+https://user-images.githubusercontent.com/80589529/227308510-7907d3ec-613b-45ce-b67b-7a693b75a7c1.mp4
+
 O modelo é aproximadamente 2,5 vezes melhor que fazer ligações a clientes aleatórios. Com a limitação de 20mil ligações, com a lista ordenada dos mais propensos temos 65% dos clientes interessados. Ou seja, de todos os clientes interessados, 65% deles estão presentes nas 20mil ligações.
 
 **Curva de ganhos acumulativos**
