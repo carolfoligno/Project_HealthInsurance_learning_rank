@@ -8,7 +8,7 @@ from healthinsurance.HealthInsurance import HealthInsurance
 
 # loading model
 # carrega na memoria direto, torna o request para predição mais rápido
-model = pickle.load(open('web_app/models/model_rf.pkl', 'rb'))
+model = pickle.load(open('web_app/models/rf_model_final.pkl', 'rb'))
 
 # deixar modelo salvo em banco de memoria como:
 # RabbitMQ e Redis
