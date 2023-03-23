@@ -40,4 +40,62 @@ No eixo X, temos a proporção de amostra do nosso conjunto de dados. No eixo Y,
 
 No eixo X temos a proporção de nossa amostra que corresponde a um determinado Lift, plotado no eixo Y. Clientes mais propensos a aceitarem a oferta aparace à esquerda do gráfico, tendo pontuações mais altas de Lift. 
 
-A linha traçada em vermelho corresponde a proporção de 20 mil clientes, que seriam as 20mil ligações. 
+A linha traçada em vermelho corresponde a proporção de 20 mil clientes, que receberam as ligações com a oferta do nosso produto.
+
+## Principais Insights dos dados
+
+É na Análise Exploratória de dados que buscamos validar hipoteses possibilitando descobrir informações novas sobre o negócio. Podendo corroborar com crenças já presentes na empresa ou até retratar tais crenças. 
+
+### ****Hipotese 1: Automóvel com mais idade o cliente tem menos interesse de obter o seguro.****
+
+FALSO. Nos dados da empresa, a idade do automovel é classificada em: Menor que 1 ano, entre 1 a 2 anos e maior que 2 anos de idade. Levando em consideração a distribuição dos dados, os clientes que tem automovel maior que 2 anos 30% deles tem interesse no novo seguro, já os clientes que tem automoveis entre 1 a 2 anos 17% tem interesse, em contrapartida de 4% dos que tem automovel menor que 1 ano tem interesse. 
+
+### ****Hipotese 2: Automóveis que já ocorreu alguma danificação no passado, o dono tem mais interesse de obter o seguro.****
+
+VERDADEIRO, 23% dos que já danificaram o carro tem interesse de obter o seguro. Já aqueles que nunca danificaram o carro, 0,5% tem o interesse de obter o seguro.
+
+### ****Hipotese 3: Clientes mais velhos tem mais interesse de obter o seguro****
+
+VERDADEIRO, clientes entre 46 a 60 são os que mais tem interesse em obter o seguro, 19% tem interesse de obter o seguro. Os clientes entre os 18 a 25 anos, 3% deles tem interesse. 
+
+## Algoritmos de Machine Learning
+
+Para esse problema de negócio, sendo um Learning to Rank, que tenta classificar uma lista de itens com base em sua relevância. Foram utilizados 3 algoritmos de Machine Learning nesse primeiro ciclo de CRISP ([artigo no Medium](https://medium.com/comunidadeds/voc%C3%AA-tem-os-dados-tem-o-problema-de-neg%C3%B3cio-mas-e-agora-o-que-fazer-bf3b2d06482)). 
+
+- KNeighborsClassifier
+- LogisticRegression
+- RandomForestClassifier 
+
+Os algoritmos eram treinados e logo depois a sua performace medida pelas métricas de Precision e Recall. Para melhor performace de aprendizado nesse caso de classificação de classes binária é preferivel uma amostragem estratificada, então para isso, foi realizado Cross Validation no dataset, obtendo os seguintes valores.
+
+![](https://user-images.githubusercontent.com/80589529/227278726-85087ed4-87d7-45cb-8353-0e2495ffca01.png)
+
+Escolhido o modelo, no caso Random Forest, é necessário descobrir quais são os melhores parametros. Utilizando o GridShearch, foi selecionado os parametros para treinar o modelo e medido o poder de generalização com dados que ele nunca viu. 
+
+![](https://user-images.githubusercontent.com/80589529/227278967-6055cf94-c45d-4358-b72e-91217b22e73c.png)
+
+## Conclusão
+
+Com a utilização de um modelo de Machine Learning, foi possivel ordenar uma lista de clientes mais propensos a aceitarem uma oferta de um novo produto da empresa. Com certeza, sendo melhor do que realizar ligações de clientes aleatoriamente.
+
+## Próximos passos
+
+- No próximo cliclo de CRISP, investigar mais os dados em busca de outros Insights.
+- Pesquisar mais sobre o modelo de negócio para beneficiar a criação de novos atributos que irão melhorar a performace do modelo.
+- Buscar outros algoritmos de Machine Learning.
+
+## Ferramentas
+
+- Linguagem de Programação: Python
+- IDE: VSCode, Jupyter Notebook
+- Algoritmos de Classificação - pacote sklearn.
+- Render Cloud
+- Google Sheets Apps Script
+
+## Referências
+
+- [Comundade DS](https://comunidadeds.com/formacao-em-ciencia-de-dados/?utm_source=google&utm_medium=cpc&utm_campaign=search_cientistadados&utm_content=institucional_descobertas&utm_term=comunidade%20ds&gclid=Cj0KCQjw8e-gBhD0ARIsAJiDsaWBa9RedU8DsWpgYM8GZOdWi5te8nPdxYtP_WsSJuIUaScVkeUDSw8aAtSFEALw_wcB).
+- Dataset disponovel no [Kaggle](https://www.kaggle.com/datasets/anmolkumar/health-insurance-cross-sell-prediction).
+
+
+
